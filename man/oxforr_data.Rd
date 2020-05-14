@@ -18,3 +18,6 @@ Data for the country and indicator requested
 This function allows you to find and display the Oxford COVID-19 Government Response Tracker (OxCGRT) data according to the selected parameters.
 If no arguments are filled, all data will be displayed.
 }
+\examples{
+myData <-oxforr_data("CAN","C1")
+}

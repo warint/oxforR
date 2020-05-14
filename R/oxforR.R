@@ -15,7 +15,7 @@
 #' @export
 #'
 #' @examples
-#' myData <-oxforr_data("CAN","C1)
+#' myData <-oxforr_data("CAN","C1")
 oxforr_data <- function(country = data_long_country,
                         indicator = data_long_indicator) {
   CountryCode <- IndicatorCode <- NULL
@@ -105,7 +105,7 @@ oxforr_indicator <- function(indicators) {
 #'
 #' @examples
 #' mycountry <- oxforr_country()
-#' mycountry <- oxforr_country("canada)
+#' mycountry <- oxforr_country("canada")
 #'
 
 oxforr_country <- function(country) {

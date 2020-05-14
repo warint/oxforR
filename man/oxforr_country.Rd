@@ -16,3 +16,8 @@ oxforr_country(country)
 This function allows you to find and search the right country code associated with the Oxford COVID-19 Government Response Tracker (OxCGRT).
 If no argument is filed, all indicators will be displayed.
 }
+\examples{
+mycountry <- oxforr_country()
+mycountry <- oxforr_country("canada")
+
+}
