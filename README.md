@@ -1,2 +1,75 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # oxforR
-Package 
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+## Overview
+
+oxforR is based on the Oxford COVID-19 Government Response Tracker
+(OxCGRT) and allows to retrieve their latest data in a R format. The
+tracker shows governmental responses to COVID-19 through 17 indicators
+for all countries. For further information, please visit their
+[website](https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker)
+and their [working
+paper](https://www.bsg.ox.ac.uk/research/publications/variation-government-responses-covid-19).
+
+## Installation
+
+You can install the released version of oxforR from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+devtools::install_github("warint/oxforR")
+```
+
+## Installation
+
+You can install the current development version of ‘oxforR’ with:
+
+``` r
+devtools::install_github("warint/oxforR")
+```
+
+## How-To
+
+### Step 1: Getting the country’s ISO code
+
+A user needs to enter the ISO code of a country. To have access to this
+code, the following function provides this information.
+
+``` r
+oxforr_country() # A list of all countries will be produced
+
+oxforr_country(country = "Canada") # The ISO code for Canada will be produced
+
+oxforr_country("Canada") # The ISO code for Canada will be produced
+```
+
+### Step 2: Getting the indicator’s code
+
+A user needs to enter the code of the desired indicator. To do so, the
+following function provides access to all the indicators of interest.
+
+``` r
+oxforr_indicator() # A list of all indicators will be produced
+
+oxforr_indicator(indicators = "public") # A list with all the variables including "public" will be produced
+
+oxforr_indicator("public") # A list with all the variables including "public" will be produced
+```
+
+### Step 3: Getting the data
+
+Once the user knows all the arguments, s.he can collect the data in a
+very easy way through this function:
+
+``` r
+
+myData <-oxforr_data(country = "CAN",indicator = c("C1","C2")) 
+
+myData <-oxforr_data(country = c("CAN","USA"),indicator = c("C1","C2"))
+```
